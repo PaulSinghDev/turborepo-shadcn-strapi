@@ -1,0 +1,45 @@
+{
+  "name": "api",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "start:prod": "pm2 start yarn $1 -- start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.17.1",
+    "@strapi/plugin-i18n": "4.17.1",
+    "@strapi/plugin-users-permissions": "4.17.1",
+    "@strapi/strapi": "4.17.1",
+    "better-sqlite3": "8.6.0",
+    "nodemailer": "^6.9.9",
+    "npm": "^10.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "strapi-plugin-slugify": "^2.3.8",
+    "strapi-plugin-transformer": "^3.1.2",
+    "styled-components": "5.3.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "61a08a02-c376-46c1-a748-0e2c49ecb9a5"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.0",
+    "@types/faker": "^6.6.9",
+    "@types/node": "^20.11.16",
+    "@types/nodemailer": "^6.4.14"
+  }
+}

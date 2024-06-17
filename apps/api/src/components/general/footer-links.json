@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_general_footer_links",
+  "info": {
+    "displayName": "Footer Links",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.link"
+    }
+  }
+}

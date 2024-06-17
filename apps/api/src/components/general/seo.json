@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_general_seos",
+  "info": {
+    "displayName": "SEO",
+    "icon": "search",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "regex": "^https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)$"
+    },
+    "keywords": {
+      "type": "string",
+      "regex": "^[a-zA-Z0-9 ]+(?:,[a-zA-Z0-9 ]+)*$"
+    },
+    "socialShareImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "schemaData": {
+      "type": "json"
+    }
+  }
+}
