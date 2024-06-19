@@ -9,6 +9,7 @@ import { GenericStructuredData } from "../components/base/generic-structured-dat
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Separator } from "@repo/ui/components/separator";
+import { Services } from "../components/services/services";
 
 export const dynamic = "force-dynamic";
 
@@ -37,14 +38,17 @@ export default async function Page(): Promise<JSX.Element> {
       <Header
         headerStyle="HOME"
         backgroundImage={pageData.featuredImage}
-        logoImage={siteInfo.logoLight}
-        title={siteInfo.tagline}
+        title={pageData.title}
         cta={{ label: "Do something", title: "Go somewhere", url: "/", id: 1 }}
-        tagline={siteInfo.tagline}
+        copy={pageData.description}
+        className="mb-0"
       />
-      <div className={"grid gap-12 m-auto max-w-content mt-12 px-8"}>
-        <Content content={pageData.content} />
-        <Separator />
+      <div className="bg-pink-blue py-12">
+        <div className={"grid gap-12 m-auto max-w-content w-4/5"}>
+          <Content content={pageData.content} />
+          <Separator />
+          <Services />
+        </div>
       </div>
       <Footer columns={siteInfo.footerLinkColumns} />
       <GenericStructuredData page={pageData} />

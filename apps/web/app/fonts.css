@@ -1,43 +1,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Permanent Marker";
-  src: url("../public/assets/fonts/PermanentMarker-Regular.ttf");
-  display: "swap";
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Courier Prime";
-  src: url("../public/assets/fonts/CourierPrime-Regular.ttf");
-  display: "swap";
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Courier Prime";
-  src: url("../public/assets/fonts/CourierPrime-Bold.ttf");
-  display: "swap";
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Courier Prime";
-  src: url("../public/assets/fonts/CourierPrime-BoldItalic.ttf");
-  display: "swap";
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Courier Prime";
-  src: url("../public/assets/fonts/CourierPrime-Italic.ttf");
-  display: "swap";
-  font-style: italic;
-}
-
-@font-face {
   font-family: "Work Sans";
   src: url("../public/assets/fonts/WorkSans-VariableFont_wght.ttf");
   display: "swap";

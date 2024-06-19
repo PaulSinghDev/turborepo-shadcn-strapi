@@ -29,7 +29,8 @@ const Header: React.FC<
         logoImage={props.logoImage}
         cta={props.cta}
         title={props.title}
-        tagline={props.tagline}
+        copy={props.copy}
+        className={props.className}
       />
     );
   if (props.headerStyle === "REVIEW") return <ReviewPageHeader />;

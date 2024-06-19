@@ -14,8 +14,6 @@ const config: Config = {
     extend: {
       ...sharedConfig.theme.extend,
       fontFamily: {
-        "permanent-marker": ["Permanent Marker"],
-        courier: ["Courier Prime", "Courier New", "Courier", "monospace"],
         "work-sans": [
           "Work Sans",
           "system-ui",

@@ -7,13 +7,15 @@ import { AnchorLink } from "../base/anchor-link/anchor-link";
 export function NavLinks({
   links,
   linkOnClickCallback,
+  className,
 }: {
   links: APILinkType[];
+  className?: string;
   // eslint-disable-next-line
   linkOnClickCallback?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }) {
   return (
-    <ul className={cn("flex gap-4 flex-col sm:flex-row")}>
+    <ul className={cn("flex gap-4 flex-col sm:flex-row", className)}>
       {links.map((link) => (
         <li key={`nav-link-${link.id}`}>
           <AnchorLink

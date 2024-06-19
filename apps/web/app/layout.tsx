@@ -3,6 +3,7 @@ import "./fonts.css";
 import type { Metadata } from "next";
 import { getSiteInfo } from "../services/api/getSiteInfo";
 import { notFound } from "next/navigation";
+import { ReactQueryClientProvider } from "../providers";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const siteInfo = await getSiteInfo();
@@ -30,8 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <ReactQueryClientProvider>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
+    </ReactQueryClientProvider>
   );
 }

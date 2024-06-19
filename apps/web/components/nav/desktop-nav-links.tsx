@@ -7,5 +7,7 @@ import { MEDIUM_BREAKPOINT } from "../../constants/screen-size";
 export function DesktopNavLinks({ links }: { links: APILinkType[] }) {
   const { width } = useScreenSize();
 
-  return width > MEDIUM_BREAKPOINT ? <NavLinks links={links} /> : null;
+  return width > MEDIUM_BREAKPOINT ? (
+    <NavLinks className="py-2 px-6 rounded-full bg-pink-blue" links={links} />
+  ) : null;
 }

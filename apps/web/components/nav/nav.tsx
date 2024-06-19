@@ -18,7 +18,7 @@ const Nav: React.FC<NavProps> = ({ testId, id, style, links, logo }) => {
       data-testid={testId}
       style={style}
       className={
-        "px-4 fixed top-0 left-0 w-full h-nav items-center flex py-2 z-10 bg-white border-b shadow-md"
+        "px-4 fixed top-0 left-0 w-full h-nav items-center flex py-2 z-10 bg-transparent"
       }
       id={id}
       role="navigation"

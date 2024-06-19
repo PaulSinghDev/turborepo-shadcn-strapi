@@ -63,6 +63,13 @@ export type APIPageType = {
   featuredImage: APIImageType;
 };
 
+export type APIServiceType = {
+  id: number;
+  title: string;
+  description: string;
+  image: APIImageType;
+};
+
 export type APIGaspFactorType = {
   id: number;
   scariness: number;
