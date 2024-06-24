@@ -109,3 +109,5 @@ build
 .strapi-updater.json
 .venv
 *.env
+
+*.gz.enc

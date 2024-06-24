@@ -7,6 +7,13 @@ export type APILinkType = {
   title: string;
 };
 
+export type APIPaginationType = {
+  page: number;
+  pageSize: number;
+  pageCount: number;
+  total: number;
+};
+
 export type APIImageFormatType = {
   name: string;
   hash: string;
@@ -68,6 +75,16 @@ export type APIServiceType = {
   title: string;
   description: string;
   image: APIImageType;
+};
+
+export type APIProjectType = {
+  id: number;
+  title: string;
+  description: string;
+  slug: string;
+  featuredImage: APIImageType;
+  gallery: APIImageType[];
+  content?: BlocksContent;
 };
 
 export type APIGaspFactorType = {

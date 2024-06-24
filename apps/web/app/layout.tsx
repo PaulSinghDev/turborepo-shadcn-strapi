@@ -1,5 +1,6 @@
 import "@repo/ui/globals.css";
 import "./fonts.css";
+import "./global.css";
 import type { Metadata } from "next";
 import { getSiteInfo } from "../services/api/getSiteInfo";
 import { notFound } from "next/navigation";

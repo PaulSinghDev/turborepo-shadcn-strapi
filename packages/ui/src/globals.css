@@ -19,18 +19,18 @@
     --secondary: #faf0ca;
     --secondary-foreground: #0d3b66;
 
-    --muted: #c6c3c2;
-    --muted-foreground: #252324;
+    --muted: theme("colors.slate.400");
+    --muted-foreground: theme("colors.slate.800");
 
-    --accent: #ea9e16;
-    --accent-foreground: #252324;
+    --accent: theme("colors.blue.500");
+    --accent-foreground: theme("colors.blue.50");
 
-    --destructive: #e73c1b;
-    --destructive-foreground: #fbf5f3;
+    --destructive: theme("colors.red.500");
+    --destructive-foreground: theme("colors.red.50");
 
-    --border: #e2dfdf;
-    --input: #fbf5f3;
-    --ring: #3ca7f4;
+    --border: theme("colors.blue.50");
+    --input: theme("colors.blue.50");
+    --ring: theme("colors.blue.500");
 
     --radius: 0.5rem;
   }

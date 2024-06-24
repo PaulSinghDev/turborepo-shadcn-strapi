@@ -1,6 +1,7 @@
 import { cn } from "@repo/ui/lib/utils";
 import Link from "next/link";
 import { cva, type VariantProps } from "class-variance-authority";
+import { Icons } from "@repo/ui/components/icons";
 
 const linkVariants = cva(
   "font-inherit text-md text-foreground transition-colors cursor-pointer underline-offset-2 text-decoration-color-foreground decoration-2 hover:underline ",
@@ -17,6 +18,7 @@ const linkVariants = cva(
         xs: "text-xs font-light",
         sm: "text-sm",
         lg: "text-lg",
+        xl: "text-xl py-4 px-6",
       },
     },
     defaultVariants: {
@@ -55,13 +57,31 @@ export function AnchorLink({
   size,
   ...props
 }: AnchorLinkWithLabelPropsType | AnchorLinkWithChildrenPropsType) {
+  const isEmail = /^mailto:/.test(href);
+  const isTikTok = /tiktok\.com/.test(href);
+  const isInstagram = /instagram\.com/.test(href);
+
   return (
     <Link
       href={href}
       title={title}
-      className={cn(linkVariants({ variant, size }), className)}
+      className={cn(
+        linkVariants({ variant, size }),
+        `${isEmail || isTikTok || isInstagram ? "inline-flex gap-2 items-center " : ""}${className}`
+      )}
+      rel={isInstagram || isTikTok ? "noopener noreferrer" : ""}
+      target={isInstagram || isTikTok ? "_blank" : ""}
       {...props}
     >
+      {isEmail ? (
+        <Icons.mail size={15} className="max-w-[15px] max-h-[15px]" />
+      ) : null}
+      {isTikTok ? (
+        <Icons.tikTok size={15} className="max-w-[15px] max-h-[15px]" />
+      ) : null}
+      {isInstagram ? (
+        <Icons.instagram size={15} className="max-w-[15px] max-h-[15px]" />
+      ) : null}
       {children ? children : label}
     </Link>
   );

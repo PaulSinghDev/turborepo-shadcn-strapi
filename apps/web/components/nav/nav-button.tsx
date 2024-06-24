@@ -15,6 +15,7 @@ const NavButton = forwardRef<HTMLButtonElement, NavButtonProps>(
         size={"sm"}
         onClick={() => setIsOpen(true)}
         variant={"transparent"}
+        className="bg-pink-blue"
       >
         <Icons.menu />
       </Button>

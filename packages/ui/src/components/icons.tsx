@@ -17,6 +17,7 @@ import {
   Combine,
   Droplets,
   Edit2,
+  MailIcon,
   ExternalLink,
   Eye,
   FileCode,
@@ -31,6 +32,7 @@ import {
   Import,
   Indent,
   Italic,
+  Instagram,
   Keyboard,
   Link2,
   Link2Off,
@@ -207,10 +209,12 @@ export const Icons = {
   h6: Heading6,
   image: Image,
   indent: Indent,
+  instagram: Instagram,
   italic: Italic,
   kbd: Keyboard,
   lineHeight: WrapText,
   link: Link2,
+  mail: MailIcon,
   menu: Menu,
   minus: Minus,
   more: MoreHorizontal,
@@ -275,6 +279,20 @@ export const Icons = {
       {...props}
     >
       <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm176.4-80a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM256 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+    </svg>
+  ),
+  tikTok: (props: LucideProps) => (
+    <svg
+      stroke="currentColor"
+      fill="currentColor"
+      stroke-width="0"
+      viewBox="0 0 448 512"
+      height="200px"
+      width="200px"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path>
     </svg>
   ),
   moon: Moon,

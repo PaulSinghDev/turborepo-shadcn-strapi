@@ -129,10 +129,6 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage: {
-        "pink-blue":
-          "linear-gradient(to left bottom, rgb(244, 114, 182), rgb(147, 197, 253))",
-      },
     },
   },
   plugins: [tailwindAnimate],

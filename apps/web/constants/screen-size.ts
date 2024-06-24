@@ -1,1 +1,1 @@
-export const MEDIUM_BREAKPOINT = 500;
+export const MEDIUM_BREAKPOINT = 640;

@@ -1,7 +1,6 @@
-import { NextRequest } from "next/server";
 import { getServices } from "../../../../services/api/getServices";
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   const data = await getServices();
-  return Response.json(data);
+  return Response.json({ success: true, data });
 }

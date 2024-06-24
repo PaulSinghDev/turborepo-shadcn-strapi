@@ -10,6 +10,9 @@ export const PAGE_METADATA_QUERY_PARAMS =
 export const SERVICES_QUERY_PARAMS =
   "fields[0]=title&fields[1]=description&populate[image]=*";
 
+export const PROJECTS_QUERY_PARAMS =
+  "fields[0]=title&fields[1]=description&fields[2]=slug&populate[featuredImage]=*&populate[gallery]=*&fields[3]=content&populate[category]=*";
+
 export const CMS_FETCH_OPTIONS = {
   method: "GET",
   headers: {

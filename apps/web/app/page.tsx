@@ -10,6 +10,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Separator } from "@repo/ui/components/separator";
 import { Services } from "../components/services/services";
+import { Projects } from "../components/projects/projects";
 
 export const dynamic = "force-dynamic";
 
@@ -49,6 +50,9 @@ export default async function Page(): Promise<JSX.Element> {
           <Separator />
           <Services />
         </div>
+      </div>
+      <div className={"grid gap-12 mx-auto my-24 max-w-content w-4/5"}>
+        <Projects />
       </div>
       <Footer columns={siteInfo.footerLinkColumns} />
       <GenericStructuredData page={pageData} />

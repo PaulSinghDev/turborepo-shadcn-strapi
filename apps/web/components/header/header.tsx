@@ -21,7 +21,14 @@ type ReviewHeaderProps = {
 const Header: React.FC<
   HomeHeaderProps | ContentHeaderProps | ReviewHeaderProps
 > = (props) => {
-  if (props.headerStyle === "CONTENT") return <ContentPageHeader />;
+  if (props.headerStyle === "CONTENT")
+    return (
+      <ContentPageHeader
+        title={props.title}
+        copy={props.copy}
+        backgroundImage={props.backgroundImage}
+      />
+    );
   if (props.headerStyle === "HOME")
     return (
       <HomePageHeader

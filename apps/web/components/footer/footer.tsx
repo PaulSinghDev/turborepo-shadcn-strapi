@@ -8,7 +8,7 @@ type FooterProps = {
 
 const Footer: React.FC<FooterProps> = ({ columns }) => {
   return (
-    <footer className={"bg-primary px-8 pt-12 pb-4"}>
+    <footer className={"bg-radial-pink-blue px-8 pt-12 pb-4"}>
       <div
         className={
           "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-content mx-auto"

@@ -6,3 +6,4 @@ export * from "./badge";
 export * from "./separator";
 export * from "./pagination";
 export * from "./tooltip";
+export * from "./carousel";

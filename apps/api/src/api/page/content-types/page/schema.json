@@ -53,16 +53,6 @@
       "type": "blocks",
       "required": true
     },
-    "isContact": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
     "featuredImage": {
       "type": "media",
       "multiple": false,

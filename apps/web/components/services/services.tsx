@@ -8,8 +8,9 @@ export function Services() {
   const { data, isLoading } = useQuery<APIServiceType[]>({
     queryKey: ["services"],
     queryFn: async () => {
-      const response = await fetch("/api/v1/services");
-      return await response.json();
+      const request = await fetch("/api/v1/services");
+      const response = await request.json();
+      return response.data;
     },
   });
 

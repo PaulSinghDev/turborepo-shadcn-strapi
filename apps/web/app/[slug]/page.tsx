@@ -5,9 +5,8 @@ import { getPageMetadataBySlug } from "../../services/api/getPageMetadataBySlug"
 import { getSiteInfo } from "../../services/api/getSiteInfo";
 import { Footer } from "../../components/footer/footer";
 import { GenericStructuredData } from "../../components/base/generic-structured-data/generic-structured-data";
-import { ContactForm } from "../../components/contact-form/contact-form";
 import { notFound } from "next/navigation";
-import { Separator } from "@repo/ui/components/separator";
+import { Header } from "../../components/header";
 
 export const dynamic = "force-dynamic";
 
@@ -41,26 +40,18 @@ export default async function Page({
         links={siteInfo.navLinks}
         logo={siteInfo.logoDark.formats.thumbnail}
       />
-      <header className={"max-w-header mt-nav py-16 px-8 mx-auto"}>
-        <div className={"flex flex-col gap-8 text-center"}>
-          <h1>{pageData.title}</h1>
-          <span>{pageData.description}</span>
-        </div>
-      </header>
-      <Separator
-        variant={"orange"}
-        className="max-w-[400px] mx-auto mb-16"
-        size={"thick-horizontal"}
-        rounding={"lg"}
+      <Header
+        headerStyle="CONTENT"
+        backgroundImage={pageData.featuredImage}
+        title={pageData.title}
+        copy={pageData.description}
+        className="mb-0"
       />
-      <div className={"px-8 max-w-content mx-auto min-h-[calc(100vh_/_2)]"}>
-        <Content content={pageData.content} />
-      </div>
-      {pageData.isContact ? (
-        <div className={"max-w-content"}>
-          <ContactForm />
+      <div className="py-20">
+        <div className={"m-auto max-w-content w-4/5"}>
+          <Content content={pageData.content} />
         </div>
-      ) : null}
+      </div>
       <Footer columns={siteInfo.footerLinkColumns} />
       <GenericStructuredData page={pageData} />
     </main>
