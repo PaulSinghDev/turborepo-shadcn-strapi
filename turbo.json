@@ -1,6 +1,10 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local", "**/.env", "CMS_ACCESS_TOKEN"],
+  "globalDependencies": [
+    "**/.env.*local",
+    "**/.env",
+    "CMS_ACCESS_TOKEN"
+  ],
   "globalEnv": [
     "CMS_ACCESS_TOKEN",
     "NEXT_PUBLIC_CMS_URI",
@@ -13,13 +17,20 @@
     "NEXT_PUBLIC_URL",
     "BASE_URI"
   ],
-  "pipeline": {
+  "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": [
+        "^lint"
+      ]
     },
     "dev": {
       "cache": false,
